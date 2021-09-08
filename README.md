@@ -24,3 +24,21 @@
     * Rahala Falls
     * Bhrigu Lake 
  **[LinktoAboutme.md](Aboutme.md)**   
+
+ ------
+ # creating a drinks and food
+**Introduction:**
+ The following is to create a table with atleast 4 food/drinks that you would recommend someone try. Include a short paragraph that introduces the table.
+
+|Mandatory   |fav1            |fav2             |fav3             |fav4       |
+|:--------:  |:---------:     |:---------:      |:----------:     |:--------- |
+|Food        |Biryani         |idly             |puri             |sprite     |
+|Location    |ongole          |addanki          |vijayawada       |martur     |
+|Amount      |450             |40               |55               |99         |
+
+-----
+# Section of Quotes
+>“The life of inner peace, being harmonious and without stress, is the easiest type of existence.”
+>*Author:* Ralph Waldo Emerson<br>
+>"If you want total security, go to prison. There you're fed, clothed, given medical care and so on. The only thing lacking... is freedom"
+>*Author:*Dwight D. Eisenhower
