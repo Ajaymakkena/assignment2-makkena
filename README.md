@@ -42,3 +42,60 @@
 >*Author:* Ralph Waldo Emerson<br>
 >"If you want total security, go to prison. There you're fed, clothed, given medical care and so on. The only thing lacking... is freedom"
 >*Author:*Dwight D. Eisenhower
+
+----
+# Heading for code fencing
+>There are various notions of a flow function that can be defined in a flow graph. Flow functions model the net flow of units between pairs of nodes, and are useful when asking questions such as what is the maximum number of units that can be transferred from the source node s to the sink node t? The simplest example of a flow function is known as a pseudo-flow. 
+A pseudo-flow is a function f : V × V → ℝ that satisfies the following two constraints for all nodes u and v:
+Skew symmetry: Only encode the net flow of units between a pair of nodes u and v (see intuition below), that is: f (u, v) = −f (v, u).
+Capacity constraint: An arc's flow cannot exceed its capacity, that is: f (u, v) ≤ c(u, v).<https://en.wikipedia.org/wiki/Flow_network>
+````
+int n;
+vector<vector<int>> capacity;
+vector<vector<int>> adj;
+
+int bfs(int s, int t, vector<int>& parent) {
+    fill(parent.begin(), parent.end(), -1);
+    parent[s] = -2;
+    queue<pair<int, int>> q;
+    q.push({s, INF});
+
+    while (!q.empty()) {
+        int cur = q.front().first;
+        int flow = q.front().second;
+        q.pop();
+
+        for (int next : adj[cur]) {
+            if (parent[next] == -1 && capacity[cur][next]) {
+                parent[next] = cur;
+                int new_flow = min(flow, capacity[cur][next]);
+                if (next == t)
+                    return new_flow;
+                q.push({next, new_flow});
+            }
+        }
+    }
+
+    return 0;
+}
+
+int maxflow(int s, int t) {
+    int flow = 0;
+    vector<int> parent(n);
+    int new_flow;
+
+    while (new_flow = bfs(s, t, parent)) {
+        flow += new_flow;
+        int cur = t;
+        while (cur != s) {
+            int prev = parent[cur];
+            capacity[prev][cur] -= new_flow;
+            capacity[cur][prev] += new_flow;
+            cur = prev;
+        }
+    }
+
+    return flow;
+}
+````
+Quick link to source code<https://cp-algorithms.com/graph/edmonds_karp.html>
