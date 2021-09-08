@@ -17,12 +17,12 @@
     3. Follow NH 205A to NH205 in Kharar
     4. Follow NH3 to Mall Rd in Manali
     5. Follow Mall Rd to Model Town Rd 3.    
-* places in manali
-    * Hadimba Temple
-    * Jogini Waterfalls
-    * Great Himalayan National Park
-    * Rahala Falls
-    * Bhrigu Lake 
+* Items to carry manali
+    * Vallet
+    * ATM cards and ID proofs
+    * masks and sanitaizer
+    * first aid kit
+    * cloths and stationary items
  **[LinktoAboutme.md](Aboutme.md)**   
 
  ------
